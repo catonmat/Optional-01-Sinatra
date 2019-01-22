@@ -1,0 +1,16 @@
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <% if recipe.tried == true %>
+      <li><%= "[X]#{index + 1} - #{recipe.name.capitalize}: #{recipe.description}" %></li>
+    <% else %>
+      <li><%= "[\t]#{index + 1} - #{recipe.name.capitalize}: #{recipe.description}" %></li>
+    <% end %>
+  <% end %>
+</ul>
+<br>
+<ul>
+  <li><a href="/new"> CREATE NEW RECIPE </a></li>
+  <li><a href="/delete_recipe"> DELETE A RECIPE </a></li>
+</ul>
+
+

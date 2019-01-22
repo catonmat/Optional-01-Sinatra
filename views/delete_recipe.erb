@@ -1,0 +1,13 @@
+<p>Select a recipe from the list below to delete:</p>
+<form action="/deleted_recipe" method="post">
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <input type="radio" name="recipe_name" value=<%= index %>><%= recipe.name.capitalize %></input><br>
+  <% end %><br>
+  <input type="submit" value="Submit">
+  </ul>
+</form>
+<br>
+<ul>
+  <li><a href="/"> RETURN TO HOMEPAGE </a></li>
+</ul>
